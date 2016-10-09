@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./lib/banner.min.css">
+	<title>淘宝众筹</title>
+</head>
+<body>
+	<!-- <div class="nav">
+		<div class="main">
+			<div class="left">
+				<a class="anchor current" href="">首页</a>
+				<div class="anchor">
+					<a>浏览项目</a>
+					<div class="fixedBox">
+						<div class="items">
+							<a href="">影音</a>
+							<a href="">影音</a>
+							<a href="">影音</a>
+							<a href="">影音</a>
+							<a href="">影音</a>
+							<a href="">影音</a>
+							<a href="">影音</a>
+						</div>
+					</div>
+				</div>
+				<a class="anchor" href="">新手帮助</a>
+			</div>
+			<div class="right">
+				<a class="anchor" href="">发布项目</a>
+				<a class="anchor" href="">我的众筹</a>
+			</div>
+		</div> -->
+	</div>
+	<div class="firstScreen">
+		<div class="main">
+			<div class="left">
+				<div class="banner"></div>
+				<div class="ad" style="background-image:url(./image/ad1.jpg);"></div>
+				<div class="ad" style="background-image:url(./image/ad2.jpg);"></div>
+			</div>
+			<div class="right">
+				<div class="banner1">
+					<div class="text">即将开始</div>
+					<span>
+						<i>＜</i>
+						<i>＞</i>
+					</span>
+				</div>
+				<div class="img img1"></div>
+				<div class="img img2"></div>
+				<div class="img img3"></div>
+			</div>
+			<div class="bottom">
+				<div class="totle">
+					<span>累计筹款金额</span>
+					<h1>206834万</h1>
+					<i></i>
+				</div>
+				<div class="totle">
+					<span>累计支持人数</span>
+					<h1>2543.1万</h1>
+					<i></i>
+				</div>
+				<div class="totle">
+					<span>单项支持最高金额</span>
+					<h1>3559万</h1>
+					<i></i>
+				</div>
+				<div class="totle">
+					<span>单项支持最高人数</span>
+					<h1>34.8万</h1>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="hot">
+		<h1>热门推荐</h1>
+		<div class="hot-title">
+			<span>大家都在看</span>
+			<a>无人机</a>
+			<a>VR</a>
+			<a>机器人</a>
+		</div>
+		<div class="content main">
+			<i class="left">＜</i>
+			<div class="hidden">
+				<div class="hot-con" style="left: 0;">
+				</div>
+			</div>
+			<i class="right">＞</i>
+		</div>
+	</div>
+	<div class="line">
+		<h1>类目精选</h1>
+		<span>潮品尖货，创造力聚集地</span>
+	</div>
+	<div class="floor floor1 main">
+		<a class="title">
+			1F<h1>科技</h1><span class="icon">▶</span>
+		</a>
+		<div class="content">
+		</div>
+	</div>
+	<div class="floor floor2 main">
+		<a class="title">
+			2F<h1>生活</h1><span class="icon">▶</span><div class="dash"></div>
+		</a>
+		<div class="content">
+		</div>
+	</div>
+	<div class="floor floor3 main">
+		<a class="title">
+			3F<h1>设计</h1><span class="icon">▶</span><div class="dash"></div>
+		</a>
+		<div class="content">
+		</div>
+	</div>
+	<div class="floor floor4 main">
+		<a class="title">
+			4F<h1>娱乐</h1><span class="icon">▶</span><div class="dash"></div>
+		</a>
+		<div class="content">
+		</div>
+	</div>
+	<div class="floor floor5 main">
+		<a class="title">
+			5F<h1>食品</h1><span class="icon">▶</span><div class="dash"></div>
+		</a>
+		<div class="content">
+		</div>
+	</div>
+	<div class="floor floor6 main">
+		<a class="title">
+			6F<h1>公益</h1><span class="icon">▶</span><div class="dash"></div>
+		</a>
+		<div class="content">
+		</div>
+	</div>
+	<div class="line">
+		<h1>人气排行</h1>
+		<span>点赞爆款，潮流风向标</span>
+	</div>
+	<div class="renqi main"></div>
+	<script type="text/javascript" src="./lib/banner.min.js"></script>
+	<script>
+			//JSON格式数据
+			var data = [
+				{
+					name : "我是图片1",
+					anchorHref : "https://www.baidu.com/",
+					imageUrl : "./image/lun1.jpg"
+				},
+				{
+					name : "我是图片2",
+					anchorHref : "http://www.qq.com/",
+					imageUrl : "./image/lun2.jpg"
+				},
+				{
+					name : "我是图片3",
+					anchorHref : "https://www.taobao.com/",
+					imageUrl : "./image/lun3.jpg"
+				},
+				{
+					name : "我是图片4",
+					anchorHref : "https://www.tmall.com/",
+					imageUrl : "./image/lun4.jpg"
+				},
+				{
+					name : "我是图片5",
+					anchorHref : "https://www.163.com/",
+					imageUrl : "./image/lun5.jpg"
+				}
+			];
+			//创建一个轮播图组件
+			Banner({
+				element : ".banner", //必需, 轮播图插入的页面位置 (选择器字符串)
+				keywords : { //必需, 字段名称 (参照以上data格式, 与data配置数据共同作用)
+					title : "name", //必需, 图片标题字段名称
+					href : "anchorHref", //必需, 图片链接字段名称
+					url : "imageUrl" //必需, 图片地址字段名称
+				},
+				data : data, //必需, 数据 (参照以上data格式, 与keywords配置字段名称共同作用)
+				theme : 2, //非必需, 轮播主题 (默认0:切换, 1:淡入淡出, 2:滑动)
+				controller : 1, //非必需, 是否启用前后翻页控制 (默认0:不启用, 1:启用)
+				indicator : 2, //非必需, 指针主题 (默认0:不启用, 1:方块, 2:圆点, 3:宽矩形)
+				duration : 4 //非必需, 轮播秒数间隔 (默认2)
+			});
+		</script>
+	<!-- <script type="text/javascript" src="./js/index.js"></script>-->
+	<script type="text/javascript" src="./js/banner1.js"></script>
+	<script type="text/javascript" src="./js/hot-banner.js"></script>
+	<script type="text/javascript" src="./lib/jQuery@1.12.4.min.js"></script>
+	<script type="text/javascript" src="./js/myJq.js"></script>
+</body>
+</html>
